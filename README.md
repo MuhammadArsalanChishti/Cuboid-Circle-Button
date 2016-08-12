@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/muhammadarsalanchishti/maven/CircleButton/images/download.svg) ](https://bintray.com/muhammadarsalanchishti/maven/CircleButton/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/muhammadarsalanchishti/maven/CircleButton/images/download.svg) ](https://bintray.com/muhammadarsalanchishti/maven/CircleButton/_latestVersion)[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Cuboid--Circle--Button-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4129)
 
 # Cuboid-Circle-Button
 ![alt tag](https://drive.google.com/uc?export=view&id=0B9zPkaTxGxJFendkcnI0VE1tMTQ)
