@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cuboid Circle Buttons"
+            android:textColor="@color/color_00796B"
+            android:textSize="24dp" />
+
+        <com.cuboid.cuboidcirclebutton.CuboidButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:text="default"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            app:cub_fontstyle="fonts/Bellerose.ttf" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:text="No Border"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:cub_border_radius="0dp"
+                app:cub_color="@color/color_03A9F4"
+                app:cub_fontstyle="fonts/Bellerose.ttf"
+                app:cub_hover_color="@color/color_00BFFF1" />
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:text="No Border"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                app:cub_border_radius="0dp"
+                app:cub_color="@color/color_37718E"
+                app:cub_fontstyle="fonts/Bellerose.ttf"
+                app:cub_hover_color="@color/color_59C3C3"
+                app:cub_icon="@drawable/ic_settings" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:text="Border"
+                android:textColor="@color/color_00796B"
+                android:textSize="18sp"
+                app:cub_border_color="@color/color_4CAF50"
+                app:cub_border_radius="4dp"
+                app:cub_color="@color/color_8BC34A"
+                app:cub_fontstyle="fonts/BunyaRegular.ttf"
+                app:cub_hover_color="@color/color_388E3C" />
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:text="No Border"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                app:cub_border_color="@color/color_00796B"
+                app:cub_border_radius="4dp"
+                app:cub_color="@color/color_009688"
+                app:cub_fontstyle="fonts/Bellerose.ttf"
+                app:cub_hover_color="@color/color_00796B"
+                app:cub_icon="@drawable/ic_camera" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ripple Effect"
+            android:textColor="@color/color_00796B"
+            android:textSize="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:text="No Border"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:cub_border_radius="0dp"
+                app:cub_color="@color/color_F57C00"
+                app:cub_hover_color="@color/color_FF5722"
+                app:cub_riple_effect="true" />
+
+            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:id="@+id/test_issues"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:text="No Border"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                app:cub_border_color="@color/color_4062BB"
+                app:cub_border_radius="4dp"
+                app:cub_color="@color/color_59C3C3"
+                app:cub_fontstyle="fonts/Bellerose.ttf"
+                app:cub_hover_color="@color/colorAccent2"
+                app:cub_icon="@drawable/icon_android"
+                 />
+
+&lt;!&ndash;            <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:id="@+id/testissues"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                app:cub_border_color="@color/color_4062BB"
+                app:cub_border_radius="2dp"
+                app:cub_color="@color/color_59C3C3"
+                app:cub_fontstyle="fonts/Bellerose.ttf"
+                app:cub_hover_color="@color/colorAccent2"
+                app:cub_icon="@drawable/icon_android"
+                />&ndash;&gt;
+        </LinearLayout>
+
+
+    </LinearLayout>-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <com.cuboid.cuboidcirclebutton.CuboidButton
+            android:id="@+id/test_issues"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:text="No Border"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+
+            />
+
+    </LinearLayout>
+</ScrollView>
