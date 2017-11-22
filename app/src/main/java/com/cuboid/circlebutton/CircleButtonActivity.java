@@ -14,12 +14,5 @@ public class CircleButtonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activtiy_design);
-        btn = (CuboidButton) findViewById(R.id.test_issues);
-        btn.ripleEffect=true;
-        btn.setCircle_hover_color(Color.YELLOW);
-        btn.setCircle_border_color(Color.GREEN);
-        btn.setCircle_border_radius(30);
-        btn.setCr_icon(R.drawable.ic_camera);
-
     }
 }
