@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
    <LinearLayout
+=======
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+
+
+    <LinearLayout
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
@@ -16,41 +27,74 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:gravity="center"
             android:text="Cuboid Circle Buttons"
             android:textColor="@color/color_00796B"
             android:textSize="24dp" />
+=======
+            android:text="Cuboid Circle Buttons"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textColor="@color/color_00796B"
+            />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
         <com.cuboid.cuboidcirclebutton.CuboidButton
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_centerInParent="true"
+<<<<<<< HEAD
             android:text="default"
             android:textColor="@android:color/white"
             android:textSize="14dp"
             app:cub_fontstyle="fonts/Bellerose.ttf" />
+=======
+            android:textColor="@android:color/white"
+            android:text="default"
+            android:textSize="14dp"
+            app:cub_fontstyle="fonts/Bellerose.ttf"
+            />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
+=======
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
             <com.cuboid.cuboidcirclebutton.CuboidButton
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerInParent="true"
+<<<<<<< HEAD
                 android:layout_marginRight="20dp"
+=======
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
                 android:text="No Border"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 app:cub_border_radius="0dp"
                 app:cub_color="@color/color_03A9F4"
                 app:cub_fontstyle="fonts/Bellerose.ttf"
+<<<<<<< HEAD
                 app:cub_hover_color="@color/color_00BFFF1" />
+=======
+                app:cub_hover_color="@color/color_00BFFF1"
+                android:layout_marginRight="20dp"
+                />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
             <com.cuboid.cuboidcirclebutton.CuboidButton
                 android:layout_width="120dp"
@@ -63,7 +107,12 @@
                 app:cub_color="@color/color_37718E"
                 app:cub_fontstyle="fonts/Bellerose.ttf"
                 app:cub_hover_color="@color/color_59C3C3"
+<<<<<<< HEAD
                 app:cub_icon="@drawable/ic_settings" />
+=======
+                app:cub_icon="@drawable/ic_settings"
+                />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
 
         </LinearLayout>
@@ -72,16 +121,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal">
+=======
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
             <com.cuboid.cuboidcirclebutton.CuboidButton
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerInParent="true"
+<<<<<<< HEAD
                 android:layout_marginRight="20dp"
+=======
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
                 android:text="Border"
                 android:textColor="@color/color_00796B"
                 android:textSize="18sp"
@@ -89,7 +149,13 @@
                 app:cub_border_radius="4dp"
                 app:cub_color="@color/color_8BC34A"
                 app:cub_fontstyle="fonts/BunyaRegular.ttf"
+<<<<<<< HEAD
                 app:cub_hover_color="@color/color_388E3C" />
+=======
+                app:cub_hover_color="@color/color_388E3C"
+                android:layout_marginRight="20dp"
+                />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
             <com.cuboid.cuboidcirclebutton.CuboidButton
                 android:layout_width="120dp"
@@ -103,7 +169,12 @@
                 app:cub_color="@color/color_009688"
                 app:cub_fontstyle="fonts/Bellerose.ttf"
                 app:cub_hover_color="@color/color_00796B"
+<<<<<<< HEAD
                 app:cub_icon="@drawable/ic_camera" />
+=======
+                app:cub_icon="@drawable/ic_camera"
+                />
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 
         </LinearLayout>
 
@@ -111,6 +182,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:gravity="center"
             android:text="Ripple Effect"
             android:textColor="@color/color_00796B"
@@ -167,12 +239,62 @@
                 app:cub_hover_color="@color/colorAccent2"
                 app:cub_icon="@drawable/icon_android"
                 />
+=======
+            android:text="Ripple Effect"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textColor="@color/color_00796B"
+            />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <com.cuboid.cuboidcirclebutton.CuboidButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:text="No Border"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:cub_border_radius="0dp"
+            app:cub_color="@color/color_F57C00"
+            app:cub_hover_color="@color/color_FF5722"
+            android:layout_marginRight="20dp"
+            app:cub_riple_effect="true"
+            />
+
+        <com.cuboid.cuboidcirclebutton.CuboidButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:text="No Border"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            app:cub_border_color="@color/color_4062BB"
+            app:cub_border_radius="4dp"
+            app:cub_color="@color/color_59C3C3"
+            app:cub_fontstyle="fonts/Bellerose.ttf"
+            app:cub_hover_color="@color/colorAccent2"
+            app:cub_icon="@drawable/icon_android"
+            app:cub_riple_effect="true"
+            />
+        
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
         </LinearLayout>
 
 
     </LinearLayout>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9105492b34e574bce80cfaf98a84065d545ecc19
 </ScrollView>
