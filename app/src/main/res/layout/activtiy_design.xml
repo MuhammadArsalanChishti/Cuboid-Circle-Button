@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -155,7 +154,7 @@
                     app:cub_icon="@drawable/icon_android"
                      />
 
-    &lt;!&ndash;            <com.cuboid.cuboidcirclebutton.CuboidButton
+    <!--            <com.cuboid.cuboidcirclebutton.CuboidButton
                     android:id="@+id/testissues"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
@@ -167,15 +166,15 @@
                     app:cub_fontstyle="fonts/Bellerose.ttf"
                     app:cub_hover_color="@color/colorAccent2"
                     app:cub_icon="@drawable/icon_android"
-                    />&ndash;&gt;
+                    />-->
             </LinearLayout>
 
 
-        </LinearLayout>-->
+        </LinearLayout>
 
 
 
-
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -194,5 +193,5 @@
 
             />
 
-    </LinearLayout>
+    </LinearLayout>-->
 </ScrollView>
