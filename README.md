@@ -8,7 +8,7 @@
 ### Gradle dependency  ```build.gradle```
 ```
 dependencies {
-    compile 'com.cuboid:cuboidcirclebutton:1.0.4'
+    compile 'com.cuboid:cuboidcirclebutton:1.0.5'
 }
 ```
 ### Android Circle Buttons with Attributes
