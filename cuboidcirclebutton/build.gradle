@@ -16,7 +16,7 @@ ext {
 
     gitUrl = 'https://github.com/MuhammadArsalanChishti/Cuboid-Circle-Button.git'
 
-    libraryVersion = '1.0.4'
+    libraryVersion = '1.0.5'
 
     developerId = 'muhammadarsalanchishti'
     developerName = 'muhammad arsalan chishti'

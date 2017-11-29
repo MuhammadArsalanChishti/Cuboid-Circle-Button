@@ -22,6 +22,7 @@
                 android:textSize="24dp" />
 
             <com.cuboid.cuboidcirclebutton.CuboidButton
+                android:id="@+id/idImg"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerInParent="true"
@@ -152,6 +153,7 @@
                     app:cub_fontstyle="fonts/Bellerose.ttf"
                     app:cub_hover_color="@color/colorAccent2"
                     app:cub_icon="@drawable/icon_android"
+                    app:cub_riple_effect="true"
                      />
 
     <!--            <com.cuboid.cuboidcirclebutton.CuboidButton
@@ -172,26 +174,4 @@
 
         </LinearLayout>
 
-
-
-<!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-
-        <com.cuboid.cuboidcirclebutton.CuboidButton
-            android:id="@+id/test_issues"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_centerInParent="true"
-            android:text="No Border"
-            android:textColor="@android:color/white"
-            android:textSize="14dp"
-
-            />
-
-    </LinearLayout>-->
 </ScrollView>

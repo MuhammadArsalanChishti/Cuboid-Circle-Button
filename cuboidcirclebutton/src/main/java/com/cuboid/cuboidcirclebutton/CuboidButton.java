@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -22,6 +23,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by arsalan.chishti on 7/24/2016.
@@ -45,10 +47,11 @@ public class CuboidButton extends TextView {
   private int startcolor, endcolor, user_given_radius;
   private int circle_color, circle_hover_color, default_color, circle_border_color, circle_border_radius, cr_icon;
 
+  private int drawCount = 0;
 
   public CuboidButton(Context context) {
     super(context);
-    //init(null);
+    init(null);
   }
 
   public CuboidButton(Context context, AttributeSet attrs) {
@@ -72,18 +75,19 @@ public class CuboidButton extends TextView {
     circlePaint.setAntiAlias(true);
     circleBorder.setAntiAlias(true);
 
-    TypedArray properties = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.MyCircleView, 0, 0);
-
+    TypedArray properties = getContext().obtainStyledAttributes(attrs, R.styleable.MyCircleView, 0, 0);
+    if (properties != null) {
     try {
       setCircle_color(properties.getInt(R.styleable.MyCircleView_cub_color, Color.BLACK));
       setCircle_hover_color(properties.getInt(R.styleable.MyCircleView_cub_hover_color, Color.GRAY));
       setCircle_border_color(properties.getInt(R.styleable.MyCircleView_cub_border_color, Color.WHITE));
       user_given_radius = properties.getDimensionPixelSize(R.styleable.MyCircleView_cub_border_radius, BORDER_RADIUS);
       setCircle_border_radius(Math.min(user_given_radius, BORDER_RADIUS));
-      int btnIcon =properties.getResourceId(R.styleable.MyCircleView_cub_icon, 0) ;
-      if(btnIcon!=0){
-        setCr_icon(btnIcon);
-      }
+      int btnIcon = properties.getResourceId(R.styleable.MyCircleView_cub_icon, 0);
+//      if(btnIcon!=0){
+      setCr_icon(btnIcon);
+      //setIconBitmap(convertToBitMap(getCr_icon()));
+      //}
 //      cr_icon = properties.getResourceId(R.styleable.MyCircleView_cub_icon, 0);
       ripleEffect = properties.getBoolean(R.styleable.MyCircleView_cub_riple_effect, false);
       fontStyle = properties.getString(R.styleable.MyCircleView_cub_fontstyle);
@@ -100,9 +104,9 @@ public class CuboidButton extends TextView {
       mPaint.setColor(Color.parseColor("#0DFFFFFF"));
 
       mRectPaint.setColor(Color.parseColor("#0DFFFFFF"));
-      b = BitmapFactory.decodeResource(getResources(), cr_icon);
-
-      setCr_icon(cr_icon);
+//      b = BitmapFactory.decodeResource(getResources(), cr_icon);
+//
+//      setCr_icon(cr_icon);
 
     } catch (Exception e) {
     } finally {
@@ -110,8 +114,24 @@ public class CuboidButton extends TextView {
     }
   }
 
+
+    if (getCr_icon() !=null) {setText("");}
+    else {setText(getText());}
+  }
+
+  void setTextIfChanged(TextView tv, CharSequence text) {
+    if (!text.equals(tv.getText()))
+      tv.setText(text);
+  }
   @Override
   protected void onDraw(Canvas canvas) {
+    //canvas.save();
+
+    drawCount++;
+
+    Log.w(this.getClass().getName(),"onDraw of Balls called. Total draws:" + Integer.toString(drawCount));
+
+
     int half_width = this.getWidth() / 2;
     int half_height = this.getHeight() / 2;
     radius = Math.min(half_width, half_height) / 4;
@@ -133,12 +153,14 @@ public class CuboidButton extends TextView {
       circleBorder.setShadowLayer(5.0f, 0.0f, 3.0f, Color.GRAY);
       canvas.drawCircle(half_width, half_height, radius, circleBorder); //BORDER CIRCLE
     }
-    if (getCr_icon() != 0) {
+    if (getCr_icon() !=null) {
       imageIcon(canvas, circlePaint, half_width, half_height);
+      setTextIfChanged(this,"");
 
-      setText("");
     } else {
-      setText(getText());
+      //setText(getText());
+      setTextIfChanged(this,getText().toString());
+
     }
     setGravity(Gravity.CENTER);
     if (ripleEffect) {
@@ -146,7 +168,9 @@ public class CuboidButton extends TextView {
         canvas.drawCircle(mCoord.x, mCoord.y, mRadius, mPaint);
       }
     }
+//    canvas.save();
     super.onDraw(canvas);
+
   }
 
   @Override
@@ -188,7 +212,6 @@ public class CuboidButton extends TextView {
         setColorAnimation(endcolor, startcolor);
         break;
     }
-    invalidate();
     return true;
 
   }
@@ -204,12 +227,11 @@ public class CuboidButton extends TextView {
     }
   }
 
-  public void imageIcon(Canvas canvas, Paint p, int p1, int p2) {
-    Bitmap b2 = scaleBitmap(b);
-    if(b2!=null){
+  public void imageIcon(final Canvas canvas, final Paint p, final int p1,final int p2) {
+    if(getCr_icon()!=null){
+      Bitmap b2 = scaleBitmap(getCr_icon());
       canvas.drawBitmap(b2, p1 - b2.getWidth() * 0.5f, p2 - b2.getHeight() * 0.5f, null);
     }
-
   }
 
   private Bitmap scaleBitmap(Bitmap bm) {
@@ -244,7 +266,7 @@ public class CuboidButton extends TextView {
       @Override
       public void onAnimationUpdate(ValueAnimator animation) {
         default_color = (int) animation.getAnimatedValue();
-        invalidate();
+       invalidate();
       }
     });
     animator.setInterpolator(new AccelerateDecelerateInterpolator());
@@ -313,18 +335,25 @@ public class CuboidButton extends TextView {
     this.circle_border_radius = circle_border_radius;
   }
 
-  public int getCr_icon() {
-    return cr_icon;
+  public Bitmap getCr_icon() {
+    return convertToBitMap(cr_icon);
   }
 
   public void setCr_icon(int cr_icon) {
     this.cr_icon = cr_icon;
   }
 
+  private Bitmap convertToBitMap(int id){
+    Bitmap icon = BitmapFactory.decodeResource(getResources(),id);
+
+    return icon;
+  }
+
   public void setRadius(final float radius) {
     mRadius = radius;
-    //invalidate();
   }
+
+
   //  GETTER SETTER----------------------------
 
   private class Coord {
